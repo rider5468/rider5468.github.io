@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width">
+    <meta name="keywords" content="관련 검색어를 단어로 분리하고, 단어마다 ','로 구분하여 입력하며, 자세하게 기술하도록 한다.">
+    <meta name="description" content="해당 사이트의 자세한 설명을 검색어와 함께 입력하여 기술하도록 한다.">
+    <meta name="title" content="기관명이나 사이트명을 입력한다.">
+    <meta name="author" content="작성자의 이름">
+    <title>회사소개</title>
+    <!--태그의 속성 : attribute ex> rel, href....-->
+    <link rel="stylesheet" href="common.css">
+    <style>
+    /*css의 속성 : property ex> display:table...*/
+        .contents{clear:both; width: 100%;}
+        .vs{width: 100%;}
+        .vs img{display:block; width:100%;}
+        .page{clear:both; width: 100vw; min-height: 100vh; border-bottom: 3px solid #333;}
+        .page_tit{text-align:center; line-height:3.6;}
+        #page1{background:skyblue; border-top: 3px solid #333;}
+        #page2{background:lime;}
+        #page3{background:white;}
+        #page4{background:pink;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+<!--       헤더시작-->
+        <header class="hd">
+            <a href="" class="logo"><img src="https://loremflickr.com/120/50" alt="로고"></a>
+<!--            <a href="" class="logo"><img src="https://placehold.it/120x50/333" alt="로고"></a>-->
+            <nav id="tnb">
+                <ul class="menu">
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="mail.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <nav id="gnb">
+                <ul class="menu">
+                    <li><a href="sub1.html">회사소개</a></li>
+                    <li><a href="sub2.html">제품소개</a></li>
+                    <li><a href="sub3.html">서비스</a></li>
+                    <li><a href="sub4.html">고객센터</a></li>
+                    <li><a href="sub5.html">자료실</a></li>
+                </ul>
+            </nav>
+        </header>
+<!--        헤더끝-->
+<!--       메인시작-->
+        <main class="contents">
+            <figure class="vs">
+                <img src="https://placehold.it/1200x400/333" alt="배너" class="pic">
+            </figure>
+<!--            페이지 시작-->
+        <div class="page" id="page1">
+            <h2 class="page_tit">회사연혁</h2>
+            <div class="page_wrap"></div>
+        </div>
+        <div class="page" id="page2">
+            <h2 class="page_tit">경영이념</h2>
+            <div class="page_wrap"></div>
+        </div>
+        <div class="page" id="page3">
+            <h2 class="page_tit">인사말</h2>
+            <div class="page_wrap"></div>
+        </div>
+        <div class="page" id="page4">
+            <h2 class="page_tit">오시는길</h2>
+            <div class="page_wrap"></div>
+        </div>
+<!--        페이지 끝-->
+        </main>
+<!--        메인끝-->
+<!--       푸터시작-->
+        <footer class="ft">
+            <p class="addr">대전광역시 대덕구 비래동 126-13 / 010-000-0000</p>
+            <p class="copyright">Copyright &copy; KHW CO, LTD. All right reserved. @ 2019</p>
+        </footer>
+<!--        푸터끝-->
+    </div>
+</body>
+</html>
