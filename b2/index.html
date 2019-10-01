@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--기본 설정-->
+    <meta charset="UTF-8">
+    <title>이천 도자기 축제</title>
+    <meta name="keywords" content="이천 도자기 축제, 이천, 도자기, 축제, 페스티벌, 체험">
+    <meta name="description" content="이천 도자기 축제에 오신 것을 환영합니다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+   <!--파비콘-->
+    <link rel="canonical" href="웹사이트 표준 페이지나 메인페이지의 주소">
+    <link rel="shortcut icon" type="image/x-icon" href="./data/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/png" sizes="256x256" href="./data/favicon/favicon256x256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./data/favicon/favicon32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./data/favicon/favicon180x180.png">
+
+   <!--오픈그래프-->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="이천 도자기 축제">
+    <meta property="og:url" content="메인페이지의 url 지정">
+    <meta property="og:site_name" content="사이천 도자기 축제">
+    <meta property="og:description" content="이천 도자기 축제에 오신 것을 환영합니다.">
+    <meta property="og:image" href="./data/image/image1.jpg">
+    <meta property="og:updated_time" content="2019-10-01">
+    
+    <!--트위터 페이스북 미리보기 설정-->
+    <meta name="twitter:card" content="이천 도자기 축제">
+    <meta name="twitter:title" content="이천 도자기 축제">
+    <meta name="twitter:description" content="이천 도자기 축제에 오신 것을 환영합니다.">
+    <meta name="twitter:image" href="./data/image/image1.jpg">
+    <meta name="twitter:creator" content="김현우">
+    <meta property="fb:admins" content="페이스북에 띄워질 관리자 url">
+
+    <!--모바일앱 미리보기 설정-->
+    <meta property="al:ios:url" content="iso앱 url">
+    <meta property="al:iso:app_store_id" content="ios 앱스토어 id">
+    <meta property="al:ios:app_name" content="ios앱 이름">
+    <meta property="al:android:url" content="안드로이드앱 url">
+    <meta property="al:android:app_name" content="안드로이드앱 이름">
+    <meta property="al:android:package" content="안드로이드앱패키지이름">
+    <meta property="al:web:url" content="웹스토어 url">
+    <meta property="al:android:app_store_id" content="안드로이드앱스토어 id">
+
+    <!-- 폰트 설정 -->
+    <!--<link rel="stylesheet" href="./css/font.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- html5shiv.js -->
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+    </scrip>
+    <style>
+        /* 초기화 및 폰트코드 */
+        *{margin: 0; padding: 0;}
+        /* font-family:"nsk" */
+        body,html{font-family: 'Noto Sans KR', sans-serif; width: 100%; height: 100%;}
+        a{text-decoration: none;}
+        ul{list-style: none;}
+        body{clear:both;}
+        
+        /* 헤더 시작 */
+        /* 상단메뉴바 */
+        .hd{width:100%; height: 120px; background-image:url("./data/hd_bg.jpg");}
+        .hd_wrap{position:relative; width:70vw; height: 60px; margin: 0 auto;}
+        .slogo{display:block; width: 306px; height: 62px; background-image:url(data/icon/logo_ichun.png); float:left;}
+        .info_box{float:left; background-image:url("./data/icon/sound_icon.png"); background-position: 0 center;
+            background-repeat:no-repeat; margin-left: 40px; line-height:60px; padding-left:34px;}
+        .top{float:right;}
+        .top li{float:left; padding-left: 10px; line-height: 60px;}
+        .top li a{display:block; color:#000;}
+
+        /* 메인메뉴+서브메뉴바 */
+        .logo{clear:both; display:block; width: 240px; height:74px; float:left; margin-left:40px;
+            background-image:url("./data/icon/copyright_logo_and_icon2.png"); background-repeat: no-repeat;}
+        .submenu{height: 0px; overflow: hidden; width: 180px; left:0; top:50px; transition:0.5s;}
+        #mainmenu{float: left; margin-left: 50px; margin-top:10px;}
+        #mainmenu li{float:left; width: 180px; text-align: center; line-height: 60px; position:relative;}
+        #mainmenu li a{display:block; color:#000; font-size:14px;}
+        #mainmenu li .submenu li{clear:both;}
+        .submenu{overflow:hidden; width:240px; height:0px; position:absolute;
+            left:0; top:50px; transition: 0.5s;}
+        #mainmenu li a.dp1{font-size: 16px; text-align: center;}
+        #mainmenu .submenu li{text-align:left; padding-left:30px;}
+        #mainmenu .submenu li a{font-size: 12px;}
+        #mainmenu:hover .dp1{color:#333;}
+        #mainmenu:hover .submenu{height: 240px; background:rgba(255,255,255,0.7); border-bottom:3px solid #996633; top:64px;}
+        
+        /* 폼요소 */
+        #frm1{float:left; padding-top: 20px;}
+        .search{display:block; float:left; width: 40px; height: 40px;
+                border-radius:21px; overflow:hidden; text-indent:-9999px;
+                background-image:url(./data/icon/Search_icon.png); background-color:#996633;
+                background-repeat:no-repeat; background-position:center center;;
+                cursor:pointer;}
+        .sel1{display: block; float:left; width:160px; margin-left: 15px; margin-top: 6px;
+                background-color: #e2e2e2; color:black; border:0px;
+                line-height:32px; height:32px; border-radius:5px 0px 0px 5px;}
+        .go_btn{display:block; float:left; width:32px; height:33px; line-height:32px;
+                text-align: center; margin-top:5px; border-left:0px; outline:0;
+                color:white; background:#996633; border-radius:0px 5px 5px 0px; border:0px;}
+        #search_form{clear:both; position:absolute; left:0; top:76px; width:70vw; height:0px;
+                background:rgba(0,0,0,0.1); transition:0.7s; overflow:hidden; border-bottom:3px solid #996633;}
+        #ck1:checked+#search_form{height: 100px;border-bottom: 3px solid #996633;}
+        #ck1{margin-left:-9999px;}
+        .close_btn{display: block; width: 50px; height: 50px; cursor: pointer;
+                background-image: url("./data/icon/close_btn.png"); background position:center center;
+                background-repeat: no-repeat; text-indent: -9999px;
+                position:absolute; right:20%; top:15px;}
+        #keyword{display:block; width: 500px; height: 40px; outline:0; border:0; background:rgba(255,255,255,0.7);
+                margin-top: 20px; margin-left: 400px; float:left; border-radius: 5px;}
+        .search_btn{display:block; width:40px; height:40px; float:left; margin-top:20px; margin-left:10px;
+            background-color:#996633; color:white; border-radius: 5px;}
+        
+        /* 헤더 끝 */
+    </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148910815-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-148910815-1');
+    </script>
+</head>
+<body>
+<header class="hd">
+    <div class="hd_wrap">
+        <a href="http://www.icheon.go.kr/site/ic/main.do" class="slogo"><!--ichun.png--></a>
+        <div class="info_box">2019년 9월 먹는물 공동시설(약수터) 수질검사결과</div>
+        <ul class="top">
+            <li><a href="http://council.icheon.go.kr/">이천시의회</a></li>
+            <li><a href="http://tour.icheon.go.kr/site/tour/main.do">문화관광</a></li>
+            <li><a href="http://www.icheon.go.kr/site/ic/boardList.do?boardSeq=4&key=193">행정마당</a></li>
+        </ul>
+    </div>
+    <div class="hd_wrap">
+        <a href="" class="logo"><!--copyright_logo_and_icon.png--></a>
+        <nav id="mainmenu">
+        <ul>
+            <li>
+                <a href="sub1.html" class="dp1">축제소개</a>
+                <ul class="submenu">
+                    <li><a href="sub11.html">축제개요</a></li>
+                    <li><a href="sub12.html">행사안내</a></li>
+                    <li><a href="sub13.html">이천도자기 역사</a></li>
+                    <li><a href="sub14.html">찾아오시는 길</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sub2.html" class="dp1">프로그램 안내</a>
+                <ul class="submenu">
+                    <li><a href="sub21.html">체험마당</a></li>
+                    <li><a href="sub22.html">판매마당</a></li>
+                    <li><a href="sub23.html">놀이마당</a></li>
+                    <li><a href="sub24.html">예약하기</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sub3.html" class="dp1">음식/숙박/쇼핑</a>
+                <ul class="submenu">
+                    <li><a href="sub3.html">음식/숙박/쇼핑</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sub4.html" class="dp1">커뮤니티</a>
+                <ul class="submenu">
+                    <li><a href="sub41.html">공지사항</a></li>
+                    <li><a href="sub42.html">갤러리</a></li>
+                    <li><a href="sub43.html">후기게시판</a></li>
+                    <li><a href="sub44.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+        </nav>
+        <form action="" id="frm1">
+        <label for="ck1" class="search"><!--Search_icon.png--></label>
+        <select name="" id="" class="sel1">
+            <option value="">한국어</option>
+            <option value="">中 文</option>
+            <option value="">日本語</option>
+            <option value="">English</option>
+        </select>
+        <button class="go_btn">Go</button>
+        <input type="checkbox" id="ck1">
+        <div id="search_form">
+            <label for="ck1" class="close_btn"></label>
+            <input type="text" id="keyword" class="search_txt">
+            <input type="submit" value="검색" class="search_btn">
+        </div>
+        </form>
+    </div>
+</header>
+<main id="content">
+    <figure id="vs">
+        <ul class="img_box">
+            <li class="item"><img src="./data/image/image1.jpg" alt=""></li>
+            <li class="item"><img src="./data/image/image2.jpg" alt=""></li>
+            <li class="item"><img src="./data/image/image3.jpg" alt=""></li>
+            <li class="item"><img src="./data/image/image4.jpg" alt=""></li>
+        </ul>
+        <ul class="btn_box">
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+        </ul>
+    </figure>
+    <div class="vs_box">
+        <div class="tit_box">
+            <h2 class="vs_tit">2019 이천 도자기 축제</h2>
+            <p class="vs_com">04.26(금)부터 05.12(일)까지 예스파크에서 즐겨요!</p>
+        </div>
+        <ul class="icon_box">
+            <li class="ico_fr"><a href=""><!--download_icon.png--></a></li>
+            <li class="ico_fr"><a href=""><!--map_icon.png--></a></li>
+            <li class="ico_fr"><a href=""><!--reservation_icon.png--></a></li>
+        </ul>
+        <div class="curve"><!--물결효과--></div>
+        <ul class="col_box">
+            <li>
+                <div class="col_fr">
+                    <h3 class="col_tit">프로그램 소개</h3>
+                    <p class="col_com">도자기 축제의 테마</p>
+                </div>
+                <ul class="lst">
+                    <li><img src="" alt="">
+                    <h4 class="cate tit"></h4>
+                    <p class="cate_com"></p>판매마당</li>
+                    <li><img src="" alt="">
+                    <h4 class="cate tit"></h4>
+                    <p class="cate_com"></p>체험마당</li>
+                    <li><img src="" alt="">
+                    <h4 class="cate tit"></h4>
+                    <p class="cate_com"></p>놀이마당</li>
+                </ul>
+            </li>
+            <li>
+                <div class="col_fr">
+                    <h3 class="col_tit">오늘의 행사</h3>
+                    <p class="col_com">내가 만든 도자기</p>
+                </div>
+                <ul class="lst">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <div class="col_fr">
+                    <h3 class="col_tit">공지사항</h3>
+                    <p class="col_com"></p>
+                </div>
+                <ul class="nt">
+                    <li><a href="">제33회 이천도자기축제 캘리그라피, 스탬프투어 및 군부대 체험 행사 관련 알림</a></li>
+                    <li><a href="">제33회 이천도자기축제 페이스페인팅 무료행사 알림2</a></li>
+                </ul>
+                <ul class="thum">
+                    <li><a href="">인스타그램</a></li>
+                    <li><a href="">카카오톡</a></li>
+                    <li><a href="">페이스북</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer id="ft">
+    <div class="ft_wrap">
+        <div class="ft_con"></div>
+        <div class="ft_mid">
+            <nav id="fnb">
+                <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영 방침</a></li>
+                    <li><a href="">사이트맵</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">
+            사업자번호 : 126-82-04231 / 주소 : 경기도 이천시 경충대로 2697번길 306
+            <br>이메일 : ceramics.icheon@cerawork.or.kr / 대표번호 : 031-645-3091~5 / 팩스 : 031-631-2199
+            <br>Copyright (c)2016 이천도자기축제. All Right Reserved.</p>
+        </div>
+        <div class="ft_logo"><!--copyright_logo_and_icon2.png--></div>
+    </div>
+</footer>
+
+</body>
+</html>

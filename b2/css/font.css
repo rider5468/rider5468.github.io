@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face{
+    font-family:"nsk";
+    src:local("./data/font/NotoSansKR-Medium"),
+        url("./data/font/NotoSansKR-Medium.eot") format("embedded-opentype"),
+        url("./data/font/NotoSansKR-Medium.woff") format("woff"),
+        url(".data/font/NotoSansKR-Medium.otf") format("opentype");
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"hsc";
+    src:local("./data/font/HanS_Calli"),
+        url("./data/font/HanS_Calli.eot") format("embedded-opentype"),
+        url("./data/font/HanS_Calli.woff") format("woff"),
+        url(".data/font/HanS_Calli.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal;
+}
