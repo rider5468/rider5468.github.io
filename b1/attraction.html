@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>종로구 문화&amp;관광</title>
+    <meta name="title" content="문화&관광의 도시 종로">
+    <meta name="keywords" content="종로, 청계천, 관광, 문화, 고궁, 한옥, 한옥, 달빛기행, 창경궁">
+    <meta name="description" content="전통과 현대가 공존하는 종로에 오신 것을 환영합니다.">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="종로구로 오세요!">
+    <meta property="og:description" content="전통과 현대가 공존하는 종로에 오신 것을 환영합니다.">
+    <meta property="og:image" content="">
+    
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./data/%EC%A2%85%EB%A1%9C%EC%95%84%EC%9D%B4%EC%BD%98.png">
+
+    <style>
+    .cate_box { width:100vw; height:40vh; 
+        background-image:url("./data/testing.jpg"); background-size:100%;
+        background-repeat: no-repeat; position:fixed; left: 0; top: 0; z-index:0; } 
+    .tb_box { position:absolute; bottom:0px; left:50%;    margin-left:-640px;
+        width: 1280px; background:#333; }
+    .tb_box li { float:left; width: 24%; background:#555; border-right:1px solid #000; border-left:1px solid #777; }
+    .tb_box li a { color:#fff; display:block; text-align: center; line-height: 52px; }    
+    body, html { overflow-y:auto; }    
+    .box { width: 100vw; height: 40vh; margin:0 auto; overflow:hidden;
+        text-align:center; margin-top:40vh; }    
+    .page { width: 100vw; height:auto; position:relative; }
+    .page_wrap { width: 1280px; height:auto; max-height: 100vh; margin:0 auto; }    
+    .page_tit { text-align: center; line-height:6; }  
+    .page .page_wrap { display:none; } 
+    .page:target .page_wrap {display:block; } 
+    #ft { clear:both; position:absolute; bottom:0; left: 0; width: 100vw; }    
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--상단메뉴-->
+        <nav id="tnb">
+            <ul class="right menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="log_in.html">Log in</a></li>
+                <li><a href="sign_up.html">회원가입</a></li>
+            </ul>
+        </nav>
+
+        <input type="checkbox" id="ck1">
+        <label for="ck1" class="lst_btn">열기</label>
+        <!--메인메뉴-->
+        <nav id="gnb">
+            <label for="ck1" class="close_btn">닫기</label>
+            <ul class="main">
+                <li><a href="theme_travel.html">테마여행</a></li>
+                <li><a href="attraction.html">명 소</a></li>
+                <li><a href="culture_history.html">문화&amp;역사</a></li>
+                <li><a href="tourist_information.html">관광안내</a></li>
+            </ul>
+            <ul class="bottom">
+                <li><a href="location_tel.html#page1">위치</a></li>
+                <li><a href="location_tel.html#page2">연락처</a></li>
+            </ul>
+        </nav>
+
+        <div class="cate_box">
+           <!-- 배경 이미지 -->
+            <ul class="tb_box">
+                <li><a href="#page1">한옥&amp;고궁</a></li>
+                <li><a href="#page2">박물관</a></li>
+                <li><a href="#page3">촬영지</a></li>
+                <li><a href="#page4">연극</a></li>
+            </ul>
+        </div>
+        <div class="box_img">
+            <img src="./data/sub02_attraction/gung_changduk.jpg" alt="배너">
+        </div>
+        <div class="page" id="page1">
+            <section class="page_wrap">
+                <h2 class="page_tit">한옥&amp;고궁</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+        </div>
+        <div class="page" id="page2">
+            <section class="page_wrap">
+                <h2 class="page_tit">박물관</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+        </div>
+        <div class="page" id="page3">
+            <section class="page_wrap">
+                <h2 class="page_tit">촬영지</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+        </div>
+        <div class="page" id="page4">
+            <section class="page_wrap">
+                <h2 class="page_tit">연극</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+        </div>
+        <!--            푸터-->
+        <footer id="ft">
+            <ul class="fnb">
+                <li><a href="">이용안내</a></li>
+                <li><a href="">개인정보</a></li>
+                <li><a href="">전화번호</a></li>
+                <li><a href="" class="last">오시는길</a></li>
+            </ul>
+            <p class="copyright">Copyright(c) 2019 JONGNO-Gu Office. Some Rights Reserved.</p>
+        </footer>
+    </div>
+    <a href="#" id="totop">↑</a>
+</body>
+
+</html>
