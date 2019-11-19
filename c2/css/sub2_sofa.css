@@ -1,0 +1,62 @@
+/* figure */
+.vs { width: 1920px; height: 400px; position:relative;}
+.img_box {width:1920px; height: 400px; background-image: url(../src/sub2_sofa_figure_1920x1200.png); background-repeat: no-repeat; background-position:top; animation: Ani1 40s linear infinite;}
+@keyframes Ani1 {
+    25% {background-position: bottom;}
+    50% {background-position: bottom;}
+    75% {background-position: top;}
+    100% {background-position: top;}
+}
+.img_box h1 {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); color: #fff; text-shadow: 10px 10px 10px #333; font-size:200px; letter-spacing: -5px;}
+
+/* main */
+
+.ct { width: 1200px; position:relative; margin:0 auto;}
+.lnb {position:absolute; z-index: 30; top:-50px; left:100px;}
+.lnb li {float:left; width: 300px; height:100px; }
+.lnb .item1, .lnb .item2{margin-right:50px;}
+.lnb a {display:block; color:white; font-weight: bold; font-size: 30px; text-align: center; line-height: 100px; background-color:rgba(0,88,163,0.6);}
+.lnb .item1 a { background-color:rgba(255,219,0,0.6);}
+.lnb a:hover { background-color:#ffdb00; text-shadow: 2px 2px 2px #333;}
+
+.sel_box {width: 1200px; height: 150px; clear:both;}
+.sel_tit {float:left; width: 90px; font-size:24px; margin-top:75px; margin-left:75px;}
+.down_btn, .up_btn {display: block; position:absolute; width:37px; height: 37px; right: 75px; top: 75px; border:3px solid black; border-radius: 100%;background-repeat: no-repeat; background-size: 20px; background-position: center; cursor: pointer;}
+.down_btn {background-image: url(../icon/ico_down_arrow.png);}
+.up_btn {display:none; background-image: url(../icon/ico_up_arrow.png); top:325px;}
+#sel_ckbox { display:none;}
+.sel_fr {display:none;}
+#sel_ckbox:checked ~ .sel_box .up_btn {display:block;} 
+#sel_ckbox:checked ~ .sel_box .down_btn {display:none;}
+#sel_ckbox:checked ~ .sel_box {height: 400px;}
+#sel_ckbox:checked ~ .sel_box .sel_fr {display:block;}
+.up_btn:hover, .down_btn:hover { background-color:#ffdb00;}
+/* 분류관련 작업해야함 */
+
+.line100 {width: 1920px; height: 100px; background-color:#0058a3; margin-left:-360px;}
+.p_box {width: 1200px; position:relative;}
+.p_box li a {display:inline-block; float:left; width:300px; height: 300px; background-position: center; background-size: 300px; background-repeat: no-repeat; margin-top:50px; margin-bottom:50px; margin-left:48px; margin-right: 48px; font-weight: 700;}
+.p_box .item a {position:relative; transition:0.6s;}
+.p_box .item .efc1 {display:block; position:absolute; width:300px; height: 300px; background-color:rgba(255,255,255,0.6); line-height: 300px; text-align: center; font-size:30px; opacity: 0; visibility: hidden; transition: 0.6s;}
+.p_box .item .efc2 {display:block; position: absolute; width:120px; height: 30px; top:250px; left: 90px; border: 3px solid #333; border-radius: 10px; line-height:30px; text-align: center; font-size:14px; opacity: 0; visibility: hidden; transition: 0.6s;}
+.p_box .item a:hover span {opacity:1; visibility:visible;}
+.p_box .item .efc2:hover { background-color:#0058a3; color:white;}
+.p_box .item a:hover {background-size:320px;}
+.p_box .item1 a {background-image:url(../src/sofa1.png);}
+.p_box .item2 a {background-image:url(../src/sofa2.png);}
+.p_box .item3 a {background-image:url(../src/sofa3.png);}
+.p_box .item4 a {background-image:url(../src/sofa4.png);}
+.p_box .item5 a {background-image:url(../src/sofa5.png);}
+.p_box .item6 a {background-image:url(../src/sofa6.png);}
+.p_box .item7 a {background-image:url(../src/sofa7.png);}
+.p_box .item8 a {background-image:url(../src/sofa8.png);}
+.p_box .item9 a {background-image:url(../src/sofa9.png);}
+.p_box .item10 a {background-image:url(../src/sofa10.png);}
+.p_box .item11 a {background-image:url(../src/sofa11.png);}
+.p_box .item12 a {background-image:url(../src/sofa12.png);}
+
+.p_box .ico a {height: 100px; background-size:72px; background-position:30px 14px; text-indent: 120px; line-height:100px; font-size:20px; border:2px solid black; border-radius: 10px; transition:0.4s;}
+.p_box .tool a {background-image:url(../icon/ico_tool.png);}
+.p_box .delivery a {background-image:url(../icon/ico_delivery.png);}
+.p_box .card a {background-image: url(../icon/ico_card.png);}
+.p_box .ico a:hover {background-color:#ffdb00;}

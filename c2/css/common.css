@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/*reset*/
+* { margin: 0; padding: 0;}
+body, html {width: 100%; font-family: 'Noto Sans KR', sans-serif; color:#333; box-sizing: border-box; overflow-x:hidden;}
+ul, li { list-style: none;}
+a { text-decoration: none; color:#333;}
+table { display: table;}
+tr { display: table-row;}
+th, td { display: table-cell;}
+img, input, button { outline: 0; border: 0; background-color: transparent;}
+
+/* area */
+
+.hd, .ft { position: relative; width: 1200px; clear:both; margin:0 auto;}
+.hd { height: 130px;}
+.ft { height: 170px;}
+
+/*header*/
+
+.hd1 { width:100vw; height:30px; margin-left:-360px; background-color:#eee;}
+.tnb ul { float:right; }
+.tnb li { float:left; margin-right:10px;}
+.tnb a {font-size:14px; line-height:30px; font-weight: bold;}
+.tnb a:after { content:"|"; margin-left:10px;}
+.tnb a:last-child::after {content:"";} /*적용 안됨*/
+.tnb a:hover {color:#0058a3;}
+.logo { display: block; float:left; width: 200px; height:100px; background-image: url(../src/logo.png);}
+.gnb { width : 600px; height: 100px; float:left; margin-left:200px;}
+.main li { float:left; position:relative;}
+.main a { display:block; width: 200px;  text-align:center; font-weight:bold; transition:0.3s;}
+.main .dp1 {line-height: 100px; font-size: 18px; }
+.main .dp1:after {content: ""; display: block; position:absolute; width:40px; height:5px; background-color:#ffdb00; top:95px; left: 20px; transition:0.4s; }
+.main li:hover .dp1:after { width:160px; }
+.main li:hover .sub li { height:50px; opacity: 1; }
+.main li a:hover{ color:#ffdb00; background-color:#0058a3;}
+.main li:hover .dp1 { color:#ffdb00; background-color:#0058a3;}
+.sub { height: 0px; position:absolute; z-index: 100;}
+.sub li { clear:both; background-color:rgba(255,255,255,0.6); height: 0px;
+    transition: 0.4s; opacity:0; }
+.sub a { line-height: 50px; }
+
+#hd_frm {width:200px; height:100px; float:left;}
+#src_btn1 { display:block; float: left; margin-top:25px; margin-left:50px; width: 50px; height: 50px; background-image:url(../icon/ico_search.png); background-position:center; background-size:30px; background-repeat: no-repeat; background-color:rgba(0,88,163,0.6); border-radius:100%; cursor:pointer;}
+#cart_btn { display:block; float: left; margin-top:25px; margin-left: 50px; width: 50px; height: 50px; background-image:url(../icon/ico_cart.png); background-position: center; background-size:30px; background-repeat: no-repeat; background-color: rgba(0,88,163,0.6); border-radius:100%; cursor:pointer;}
+#src_btn1:hover, #cart_btn:hover {background-color:#ffdb00;}
+
+.search_form { position: absolute; width: 1200px; height:0px; background-color:rgba(0,0,0,0.6); top:130px; left:0; overflow:hidden; transition: 0.4s; opacity: 0; z-index : 80;}
+#src_bar { display:block; float:left; width: 800px; height: 40px; margin-top: 30px; margin-left: 180px; background-color:white; text-indent: 20px;}
+#src_btn2 { display: block; float:left; width: 40px; height: 40px; margin-top: 30px;  margin-left: 10px; background-image:url(../icon/ico_search.png); background-position: center; background-size: 30px; background-repeat: no-repeat; background-color:rgba(255,255,255,0.6); cursor: pointer;}
+#src_btn2:hover {background-color:#ffdb00;}
+#close_btn { display:block; position:absolute; right:5px; top:5px; width: 25px; height: 25px; background-image:url(../icon/ico_close_btn.png); background-position: center; background-size: 20px; background-repeat: no-repeat; background-color:rgba(255,255,255,0.6); border-radius:5px; cursor: pointer;}
+#close_btn:hover {background-color:rgba(255,255,255,1);}
+#ck1 { display:none; }
+#hd_frm #ck1:checked ~ .search_form { height: 100px; opacity: 1;}
+
+/*footer*/
+
+.ft { background-color: #0058a3; width: 1920px; }
+.fnb { width: 400px; height: 50px; margin:0 auto;}
+.fnb li {float:left;}
+.fnb li a { color: white; text-align: center; line-height: 50px; margin-right: 10px;}
+.fnb li a:after {content: "|"; margin-left: 10px; }
+.fnb li a:last-child::after {content:"";} /* 이것도 실패 */
+.fnb li a:hover {color:#ffdb00;}
+
+.copyright { width: 1200px; height: 120px; margin:0 auto; color:white;}
+.copyright h4 {color: #ffdb00;}
+.copyright p { font-size:14px; letter-spacing: 2px;}
