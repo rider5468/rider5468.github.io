@@ -21,21 +21,97 @@
    
     <style>
         *{margin: 0; padding: 0;}
-        body,html{font-family: 'Noto Sans KR', sans-serif; width: 100%; height: 100%;}
+        body,html{font-family: 'Noto Sans KR', sans-serif; width: 100%; overflow-x:hidden;}
         a{text-decoration: none;}
-        ul{list-style: none;}
+        li{list-style: none;}
         body{clear:both;}
-        .hd{width: 100%; height: 80px; position:absolute;}
-        .topmenu{position:relative; width:100%; height:30px; background-color:black; opacity: 0.7; }
-        .topmenu ul {float:right; margin-right:120px;}
-        .topmenu li {float:left; line-height:30px; margin-right:25px;}
-        .topmenu li a {display:block; color:white;}
-        .mainmenu{position:relative; width:100%; height:50px;}
-        .logo1{width: 200px; height: 50px; background-image: url(./icon/logo1.png); background-size:cover; background-repeat: no-repeat;}
-        .mainmenu{width:60%; height:50px; margin:0 auto;}
-        .mainmenu ul {float:left;}
-        .mainmenu li {float:left;}
-        .submenu {clear:both; display:none;}
+        
+        /* 헤더 다시하기 */
+        .hd{width:100%; height:120px;}
+        .topmenu {width:100%; height:30px; background-color:#071910;}
+        .topmenu ul{float:right; margin-right:350px;}
+        .topmenu li{float:left; line-height:30px; margin-right:12px;}
+        .topmenu li a{display:block; color:#fff;}
+        
+        .topmenu li a:after {content:"|"; margin-left:12px;}
+        
+        .mainmenu {width:1200px; height:90px; position:relative; float:left; margin:0 auto; margin-left:500px;}
+        .logo1 {display:block; clear:both; width: 210px; height: 60px; background-image:url(./icon/logo1.png);
+            background-size:210px 60px; background-position:center; background-repeat:no-repeat;
+            position:absolute; top:10px; margin-left:-250px;}
+        .mainmenu li {float:left; width:200px; line-height:90px; text-align:center; position:relative;}
+        .mainmenu li a {display:block; color:black; font-size:18px; font-weight:700}
+        .submenu {width:100%; height:0px; overflow:hidden; background-color:rgba(255, 255, 255, 0.7); transition:0.6s; }
+        .submenu li {width:200px; height:50px;}
+        .submenu li a {font-size:14px;}
+        .mainmenu:hover .submenu{padding-bottom:280px;}
+        .submenu a:hover {color:navy;}
+        
+        .content:{clear:both; width: 100%; height: 100%;}
+        #vs{width: 100%; height:675px; overflow:hidden; background:#222;}
+        #img_box{width:100vw; height:675px; transition:0.7s;}
+        #img_box li{width:100vw; height:675px;}
+        #img_box li img{display:block; width:1200px; overflow:hidden; margin:0 auto;}
+        
+        .btn_box{width:200px; height:15px; position:absolute; z-index:9; bottom:30px; left:860px; top:720px;}
+        .btn_box label{display:block; background-color:white; border:2px solid #fff; width:15px; height:15px; float:left; border-radius:10px; margin-left:40px; cursor:pointer; transition:0.5s;}
+        
+        #ra1:checked ~ .btn_box .item1 label{background-color:darkblue; width:30px;}
+        #ra2:checked ~ .btn_box .item2 label{background-color:darkblue; width:30px;}
+        #ra3:checked ~ .btn_box .item3 label{background-color:darkblue; width:30px;}
+        
+        .ra{display:none;}
+        
+        #ra1:checked ~ #img_box{margin-top:0;}
+        #ra2:checked ~ #img_box{margin-top:-675px;}
+        #ra3:checked ~ #img_box{margin-top:-1350px;}
+        
+        #frm1{width:100%; height: 86px; background:#EEE;); margin-top:30px;}
+        .search_bar{display:block; width:600px; height: 50px; margin-left:650px; margin-top:15px; float:left; line-height:100px; text-indent:20px; font-size:20px; opacity:0.6; transition: 0.6;}
+        .search_btn{display:block; width:54px; height:54px; background:black; background-image:url(./icon/icon_search.png); background-size:30px 30px; background-position:center; background-repeat:no-repeat; text-indent:-9999px; float:left;  margin-top:15px; margin-left:5px; transition:0.6;}
+        
+        .search_bar:focus {opacity:1;}
+        .search_bar:focus .search_btn {background:navy;}
+        
+        h5{font-size:14px;}
+        
+        #page1{width:100%; height:300px; position:relative;}
+        .page_tit{text-align:center; margin-top:30px;}
+        .icon_box{width:1200px; height:200px; margin:0 auto; margin-top:50px;}
+        .icon_box li{float:left; margin-left:224px; width:100px; height:100px; background-color:#0A2A0A; border-radius:100px; transition: 0.3s;}
+        .icon_box a{display:block; width:100px; height:100px; color:black;}
+        .icon_box h5{padding-top:110px; text-align:center;}
+        #icon1{background-image:url(./icon/icon_list.png); background-size:50px; background-position:center; background-repeat:no-repeat;}
+        #icon2{background-image:url(./icon/icon_document.png); background-size:50px; background-position:30px center; background-repeat:no-repeat;}
+        #icon3{background-image:url(./icon/icon_shedule.png); background-size:50px; background-position:center; background-repeat: no-repeat;}
+        
+        .icon_1:hover {background:navy;}
+        .icon_2:hover {background:navy;}
+        .icon_3:hover {background:navy;}
+        
+        #page2{width:100%; height:600px; position:relative; background:#EEE; padding-top:10px;}
+        .news{width:1400px; height:300px; margin:0 auto; margin-top:50px;}
+        .news li{float:left; margin-left: 124px; width:300px; height:400px; background-color:black;}
+        .news a{display:block; width:300px; height:400px; color:black;}
+        .news h5{padding-top:410px;  text-align:center;}
+        #news1{background-image:url(./image/main_article/article1.jpg); background-size:contain; background-position:center; background-repeat:no-repeat;}
+        #news2{background-image:url(./image/main_article/article2.jpg); background-size:contain; background-position:center; background-repeat:no-repeat;}
+        #news3{background-image:url(./image/main_article/article3.jpg); background-size:contain; background-position:center; background-repeat:no-repeat;}
+        
+        .ft{width:100%; height: 100%}
+        .ft_wrap{width:100%; height:180px;}
+        .ftmenu{width:1200px; height:40px; margin:0 auto;}
+        .ftmenu li{float:left;}
+        .ftmenu a{display:block; margin-right:14px; line-height:40px; color:black;}
+        .ftmenu a:after {content:"|"; margin-left: 14px;}
+        
+        .bottom{width:100%; height:140px; background:#071910;}
+        .logo2{display:block; position:absolute; width:200px; height:140px; background-image:url(./icon/logo2.png); background-size:200px 140px; background-repeat: no-repeat; background-position:center; margin-left:350px;}
+        .bottom p{margin-left:600px; line-height:45px; color:white; font-size:14px;}
+        
+        a.last:after{content=""; display: none;}
+        
+        
     </style>
     
     <script>
@@ -54,7 +130,7 @@
                </ul>
            </nav>
            <nav class="mainmenu">
-              <a href="" class="logo1"><!--logo1--></a>
+             <a href="" class="logo1"><!--logo1--></a>
                <ul>
                    <li>
                        <a href="">국방부 소개</a>
@@ -111,9 +187,9 @@
             <input type="radio" name="rdo" class="ra" id="ra2">
             <input type="radio" name="rdo" class="ra" id="ra3">
             <ul id="img_box">
-                <li class="item1"><a href=""><img src="" alt=""></a></li>
-                <li class="item2"><a href=""><img src="" alt=""></a></li>
-                <li class="item3"><a href=""><img src="" alt=""></a></li>
+                <li class="item1"><a href=""><img src="./image/banner2.jpg" alt=""></a></li>
+                <li class="item2"><a href=""><img src="./image/banner3.jpg" alt=""></a></li>
+                <li class="item3"><a href=""><img src="./image/banner4.jpg" alt=""></a></li>
             </ul>
             <ul class="btn_box">
                 <li class="item1"><label for="ra1"></label></li>
@@ -122,43 +198,49 @@
             </ul>
         </figure>
         <form action="" id="frm1">
-            <input type="text" class="search_bar">
-            <input type="submit" class="search"><!--서치 아이콘-->
+            <input type="text" class="search_bar" >
+            <input type="submit" class="search_btn"><!--서치 아이콘-->
         </form>
         <div class="page" id="page1">
-            <h2 id="page1_tit">자주 찾는 서비스</h2>
+            <h1 id="page1_tit" class="page_tit">자주 찾는 서비스</h1>
             <div class="icon_box">
                 <ur>
-                    <li>
-                        <a href=""><!--자료 아이콘--></a>
-                        <h5>업무 분야별 자료</h5>
+                    <li class="icon_1">
+                        <a href="" class="icon" id="icon1"><!--자료 아이콘-->
+                            <h5>업무 분야별 자료</h5>
+                        </a>
                     </li>
-                    <li>
-                        <a href=""><!--민원 아이콘--></a>
-                        <h5>민원신청</h5>
+                    <li class="icon_2">
+                       <a href="" class="icon" id="icon2"><!--민원 아이콘-->
+                            <h5>민원신청</h5>
+                        </a>
                     </li>
-                    <li>
-                        <a href=""><!--스캐쥴 아이콘--></a>
-                        <h5>2019 업무계획</h5>
+                    <li class="icon_3">
+                       <a href="" class="icon" id="icon3"><!--스캐쥴 아이콘-->
+                            <h5>2019 업무계획</h5>
+                        </a>
                     </li>
                 </ur>
             </div>
         </div>
         <div class="page" id="page2">
-            <h2 id="page_tit"></h2>
+            <h1 id="page_tit" class="page_tit">보도자료</h1>
             <div class="news">
                 <ur>
-                    <li>
-                        <a href="./image/main_article/article1.jpg"></a>
-                        <h5>한-UAE 국제 평화정착 협력 강화</h5>
+                    <li id="news1">
+                        <a href="" class="article" id="article1">
+                            <h5>한-UAE 국제 평화정착 협력 강화</h5>
+                        </a>
                     </li>
-                    <li>
-                        <a href="./image/main_article/article2.jpg"></a>
-                        <h5>강력한 힘 기반 국가.국민 지킬 것</h5>
+                    <li id="news2">
+                        <a href="" class="article" id="article2">
+                            <h5>강력한 힘 기반 국가. 국민 지킬 것</h5>
+                        </a>
                     </li>
-                    <li>
-                        <a href="./image/main_article/article3.jpg"></a>
-                        <h5>굳건한 한미 연합방위 바탕 ‘항구적 평화정착’ 견인</h5>
+                    <li id="news3">
+                        <a href="" class="article" id="article3">
+                            <h5>굳건한 한미 연합방위 바탕 ‘항구적 평화정착’ 견인</h5>
+                        </a>
                     </li>
                 </ur>
             </div>
@@ -167,15 +249,15 @@
     <footer class="ft">
         <div class="ft_wrap">
             <nav class="ftmenu">
-                <ur>
+                <ul>
                     <li><a href="">개인정보처리방침</a></li>
                     <li><a href="">저작권정책</a></li>
                     <li><a href="">이용안내</a></li>
-                    <li><a href="">군관련기관</a></li>
-                </ur>
+                    <li><a class="last" href="">군관련기관</a></li>
+                </ul>
             </nav>
             <div class="bottom">
-                <a href="index.html" class="logo2"></a>
+                <a href="index.html" class="logo2"><!--logo--></a>
                 <p class="copyright">
                     [04383] 서울특별시 용산구 이태원로 22 대표전화 02) 748-1111 팩스 02) 748-6895<br>
                     이 누리집에 쓰인 전자우편 주소가 자동 수집되는 것을 거부하며,<br>
