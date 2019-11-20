@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.log_wrap{width:1200px; height:590px; margin:0 auto; background-color:#eee;;}
+.tit_background{width:1200px; height:150px; background-color:#333; margin:0 auto;}
+.log_in_tit{width:200px; height:150px; margin:0 auto;
+color:white; font-size:90px; text-shadow:5px 5px 10px white;}
+.log_wrap h4{text-align: center;}
+.log_wrap1, .log_wrap2 {width:600px; height:590px; position:relative; float:left;}
+.log_wrap1 {background-color:eee;}
+.log_wrap2 {background-image:url(../src/log_wrap2_back.png);}
+#m_id, #m_pw, #m_login{display:block; width:500px; height:50px; margin-left:50px; text-indent: 20px; float:left;}
+#m_id {margin-top: 150px;}
+#m_pw {margin-top: 50px;}
+#m_login{display:block; background-color:black; color:white; font-size:20px; font-weight: bold; margin-top:50px; margin-left:50px; box-shadow: 1px 1px 5px white; transition: 0.4s; cursor: pointer;}
+#m_login:hover {transform:scale(1.02); color:goldenrod;}
+.log_wrap1 p, .log_wrap a{margin-top: 5px; color:#333;}
+.log_wrap1 p {width:200px; height:20px; margin-left:60px; float:left;}
+.log_wrap1 a {display:block; width:280px; height:20px; float:left; text-align: right; text-decoration: underline;}

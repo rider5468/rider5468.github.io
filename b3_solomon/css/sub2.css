@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* snb */
+.ct{width:1200px; margin:0 auto;}
+.snb_box{width:300px; height:1000px; float:left; background-color:#333; margin-bottom:50px;}
+.snb{width:200px; margin:0 auto; margin-top:100px;}
+.snb li {margin-top:50px;}
+.snb label {display:block; color:white; text-align: center; font-size:16px;
+        font-weight:700; cursor:pointer;}
+.snb .line{ display: block; width:0px; height:3px; background-color:white; margin:10px auto; transition:0.6s;}
+.snb label:hover ~ .line{width:100px; background-color:goldenrod;}
+.snb label:hover {color:goldenrod;}
+.ra{display:none;}
+
+/* con */
+
+.con_box{position:absolute; width:900px; height:1000px; float:left; left:300px;}
+.con_box1{display:none;}
+.con_box2{display:none;}
+.con_box3{display:none;}
+.main_tit{height:200px; background-image: url(../src/sub2_img.png); background-size:cover; background-repeat:no-repeat; background-position:center; line-height:200px; font-size: 40px; text-align: center; color:white;
+ text-shadow:2px 2px 2px black; letter-spacing: 10px;}
+.bc{margin-top:20px; margin-left:600px; width: 300px; height:36px;}
+.home_ico{float:left; width:30px; height:30px; background-image:url(../icon/home_black.png); background-position:center; background-repeat: no-repeat; background-size:20px; font-weight:700;}
+.breadcrumb{line-height:30px;}
+.breadcrumb span {color:goldenrod; font-weight:700;}
+.content{position:relative; width:800px; height:740px; margin:0 auto;}
+.p_frm{width:800px; height:40px; margin:0 auto;}
+.more_btn{display:block; position:relative; width:150px; height:30px; margin:5px auto; background-color: transparent; border:1px solid black; border-radius: 5px; font-size:16px; font-weight: bold; line-height:30px; cursor: pointer; transition:1s;}
+.more_btn:hover {text-shadow: 2px 2px 2px #333; background-color:goldenrod; color:white;}
+
+.content img {display:block;}
+
+
+.content1{}
+.content2{}
+.con_box3 .con_tit3{letter-spacing: 5px;}
+.content3{}
+
+#ra1:checked ~ .con_box1{display:block;}
+#ra2:checked ~ .con_box2{display:block;}
+#ra3:checked ~ .con_box3{display:block;}
+
