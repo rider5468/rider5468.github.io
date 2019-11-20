@@ -1,0 +1,27 @@
+@charset "utf-8";
+.join_wrap {width:1200px; height:1110px; margin:0 auto; background-color:#333;}
+.join_tit {height:200px; background-image:url(../src/join_tit.png);}
+.join_tit p {font-size:100px; text-align: center; line-height:200px; font-weight: bold; color: white; text-shadow: 2px 2px 2px black;}
+#frm1 {width: 750px; height:1000px; background-color:white; margin:0 auto;}
+#frm1 div {width: 750px; height:100px; float: left; margin-top: 30px;}
+#frm1 label {display:block; width:200px; height:30px; line-height:30px; text-align: center; float:left; font-size:16px; }
+#m_id, #m_pw, #m_pw2, #m_name, #m_email, #m_tel {display:block; width: 300px; height: 40px; border-radius: 5px; float:left; text-indent: 20px; background-color:#eee;}
+#id_check { display:block; float:left; width:100px; height:30px; line-height:30px;
+    margin-left: 20px; margin-top:5px; cursor: pointer;
+    background-color:lightgray; border-radius: 5px;
+    text-align:center; font-size:16px; color:#333; font-weight: bold;}
+#tel_check{ display:block; float:left; width:100px; height:30px; line-height:30px;
+    margin-left: 20px; margin-top:5px; cursor: pointer;
+    background-color:lightgray; border-radius: 5px;
+    text-align:center; font-size:16px; color:#333; font-weight: bold;}
+#join_btn { display:block; float:left; width:200px; height: 50px; line-height:50px;
+    margin-left: 200px; cursor: pointer;
+    background-color:lightgray; border-radius: 5px;
+    text-align: center; font-size: 18px; color:#333; font-weight: bold;}
+#cancel_btn { display:block; float:left; width:100px; height:50px; line-height:50px;
+    margin-left:50px; cursor: pointer;
+    background-color:lightgray; border-radius: 5px;
+    text-align:center; font-size: 18px; color:#333; font-weight: bold;}
+#id_check:hover, #tel_check:hover, #join_btn:hover, #cancel_btn:hover {background-color:goldenrod; box-shadow: 2px 2px 4px black;}
+
+.ft {margin:0;}

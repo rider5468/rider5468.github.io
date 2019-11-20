@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* snb */
+.ct{width:1200px; margin:0 auto;}
+.snb_box{width:300px; height:1000px; float:left; background-color:#333; margin-bottom:50px;}
+.snb{width:200px; margin:0 auto; margin-top:100px;}
+.snb li {margin-top:50px;}
+.snb label {display:block; color:white; text-align: center; font-size:16px;
+        font-weight:700; cursor:pointer;}
+.snb .line{ display: block; width:0px; height:3px; background-color:white; margin:10px auto; transition:0.6s;}
+.snb label:hover ~ .line{width:100px; background-color:goldenrod;}
+.snb label:hover {color:goldenrod;}
+.ra{display:none;}
+
+/* con */
+
+.con_box{position:absolute; width:900px; height:1000px; float:left; left:300px;}
+.con_box1{display:none;}
+.con_box2{display:none;}
+.main_tit{height:200px; background-color: black; background-size:cover; background-repeat:no-repeat; background-position:center; line-height:200px; font-size: 40px; text-align: center; color:white;
+ text-shadow:2px 2px 2px goldenrod; letter-spacing: 10px;}
+.bc{margin-top:20px; margin-left:600px; width: 300px; height:36px;}
+.home_ico{float:left; width:30px; height:30px; background-image:url(../icon/home_black.png); background-position:center; background-repeat: no-repeat; background-size:20px; font-weight:700;}
+.breadcrumb{line-height:30px;}
+.breadcrumb span {color:goldenrod; font-weight:700;}
+.content{position:relative; width:800px; height:740px; margin:0 auto;}
+
+.con_tit1{background-image:url(../src/FAQ_img.png);}
+.faq_ra{display:none;}
+.faq_label_box{width:800px; height:100px;}
+.faq_label{display:block; float:left; width:266px; height: 100px; background-color:#ccc; text-align: center; line-height:100px; font-size:20px; font-weight: bold; border-right:2px solid #333; box-sizing:border-box; cursor: pointer; transition:0.5s;}
+.faq_label_box li:last-child label {border-right:0;}
+.faq_label:hover {background-color:black; color:white; text-shadow:2px 2px 2px goldenrod; font-size:22px;}
+.faq_fr li {width:800px; height:640px; display:none;}
+#faq_ra1:checked ~ .faq_fr .faq_box1 {display:block;}
+#faq_ra2:checked ~ .faq_fr .faq_box2 {display:block;}
+#faq_ra3:checked ~ .faq_fr .faq_box3 {display:block;}
+
+.faq_frm{position:relative; width:100%; height:50px; }
+.faq_frm input {display:block; border:2px solid black; border-radius:5px; transition:0.4s;}
+.faq_frm input[type=button]{box-shadow: 2px 2px 2px goldenrod; background-color: white; cursor: pointer;}
+.faq_search{float:left; width:300px; height:30px; margin-top:8px; margin-left:250px; text-indent: 10px;}
+.faq_search_btn{float:left; width:30px; height:30px; margin-top:10px; margin-left:10px; background-image: url(../icon/search_black.png); background-position:center; background-repeat: no-repeat;}
+.faq_frm .faq_search_btn:hover {background-color:goldenrod;}
+
+.faq1 {border-collapse: collapse;}
+.faq1 tr{border-bottom:1px solid black; }
+.faq1 .col1{ width:150px; text-align: center;}
+.faq1 th {text-align: center; background-color:#333; color:white; height: 50px;}
+.faq1 .col2{ width:650px;}
+.faq1 td{height:100px;}
+.faq1 td a{display:block; text-indent: 20px; font-weight:bold;}
+
+.faq2 {border-collapse: collapse;}
+.faq2 tr{border-bottom:1px solid black; }
+.faq2 .col1{ width:150px; text-align: center;}
+.faq2 th {text-align: center; background-color:#333; color:white; height: 50px;}
+.faq2 .col2{ width:650px;}
+.faq2 td{height:100px;}
+.faq2 td a{display:block; text-indent: 20px; font-weight:bold;}
+
+.faq3 {border-collapse: collapse;}
+.faq3 tr{border-bottom:1px solid black; }
+.faq3 .col1{ width:150px; text-align: center;}
+.faq3 th {text-align: center; background-color:#333; color:white; height: 50px;}
+.faq3 .col2{ width:650px;}
+.faq3 td{height:100px;}
+.faq3 td a{display:block; text-indent: 20px; font-weight:bold;}
+
+.faq_fr a:hover {text-decoration: underline;}
+
+.con_tit2{background-image:url(../src/mail_img.png);}
+#qna_frm{position:relative; width:800px; height: 740px;}
+#qna_frm input{display:block; border:1px solid #333; box-sizing: border-box;}
+#qna_tit{width:800px; height: 50px; margin-bottom:25px; text-indent: 10px;}
+#qna_com{width:800px; height: 550px; margin-bottom:25px; padding-top:10px; text-indent: 10px;}
+#qna_submit{width:200px; height: 40px; background-color:transparent; margin:0 auto; border-radius: 5px; font-weight: bold; font-size:16px; letter-spacing:2px; cursor: pointer; transition:0.2s;}
+#qna_submit:hover {background-color:goldenrod;}
+
+
+#ra1:checked ~ .con_box1{display:block;}
+#ra2:checked ~ .con_box2{display:block;}
+#ra3:checked ~ .con_box3{display:block;}
+
