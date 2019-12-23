@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHOWBOX</title>
+    <!-- 웹폰트 연결 -->
+    <!-- 구글폰트 : https://fonts.google.com/?subset=korean&selection.family=Noto+Sans+KR -->
+    <!-- 눈누 : https://noonnu.cc/-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!-- font-family: 'Noto Sans KR', sans-serif; -->
+
+    <!-- XE icon폰트 링크 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 아이콘셋 : https://xpressengine.github.io/XEIcon/library-2.3.3.html -->
+    <!-- 형식 : <span class="xi-bars"></span>-->
+
+    <style>
+        * { padding: 0; margin: 0;}
+        html, body { width: 100%; height: 100%; -ms-overflow-style: hidden; font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
+        html { overflow: hidden;}
+        body { overflow: auto;}
+        ::-webkit-scrollbar { display: none;} ::-moz-scrollbar { display: none;} ::-o-scrollbar { display: none;}
+        ul { list-style: none;}
+        a { text-decoration: none; font-size: 14px;}
+        input, button, img { background-color: transparent; border: 0; outline: 0; }
+
+        /* header + gnb */
+        #top { position: absolute; top:0; left: 0; width: 100vw; height: 50px; z-index: 100;}
+        #top .logo { display: block; float: left; width: 200px; height: 50px; margin-left: 2vw; background-image: url(./src/logo200x50.png); }
+        #top .menu_btn { display: block; float: right; width: 50px; height: 50px; margin-right: 2vw; cursor: pointer;}
+        #top .menu_btn span { display: block; font-size: 40px; color: #333;}
+
+        #gnb { position: fixed; display: none; width: 100vw; height: 100vh; top:0; left: 0; background-color: #eee; z-index: 200;}
+        #gnb .menu { position: relative; display: flex; width: 100vw; height: 100vh; flex-flow: column wrap; justify-content: center; align-items: center;}
+        #gnb .menu a { display: block; width: 20vw; height: 10vh; text-align: center; color: #333; font-size: 2em; font-weight: bold; text-shadow: 0 1px 3px #555;}
+        #gnb .gnb_cls { display: block; position: absolute; top: 10vw; right: 10vw; cursor: pointer;}
+        #gnb .gnb_cls span { display: block; font-size: 2.4em; font-weight: bold;}
+        
+        /* main */
+        #ct .page { position: relative; width: 100vw; height: 100vh; }
+        #ct .page:after { content: ""; display: table; clear: both; }
+        #ct #page1 { display: flex; width: 100vw; height: 100vh; justify-content: center; align-items: center;}
+        #ct #page1 .vdo_tit { position: absolute; z-index: 1; font-size: 3.2em; color: darkorange;}
+        #ct #page1 #vdo_tit1 { top: 10vw; }
+        #ct #page1 #vdo_tit2 { bottom: 10vw;}
+        #ct #page1 .video_box { display: flex; width: 28vw; height: 28vw; border-radius: 100%; justify-content: center; align-items: center; box-shadow: 1px 1px 10px #333; overflow: hidden;transition: 1s;}
+        #ct #page1 #vdo { display: block; width: 100vw; height: 100vh; }
+        #ct #page1 .film { position: absolute; background-image: url(./src/film2.svg); background-position: center; background-repeat: repeat; background-size:contain; width: 300vw; height: 10vh; bottom: 0; animation: film 30s linear infinite;}
+        @keyframes film {
+            0% { margin-left: 0;}
+            100% { margin-left: -100vw;}
+        }
+        #ct #page1:hover .video_box { transform: scale(1.1); }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menu_btn, .gnb_cls").on("click", function(){
+                $("#gnb").fadeToggle(200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div id="top">
+            <a href="index.html" class="logo"></a>
+            <button class="menu_btn">
+                <span class="xi-fog"></span>
+            </button>
+        </div>
+        <nav id="gnb">
+            <ul class="menu">
+                <li><a href="sub1.html">COMPANY</a></li>
+                <li><a href="sub2.html">FILMS</a></li>
+                <li><a href="sub3.html">SNS</a></li>
+                <li><a href="sub4.html">MAIN4</a></li>
+                <li><a href="sub5.html">MAIN5</a></li>
+            </ul>
+            <button class="gnb_cls">
+                <span class="xi-close"></span>
+            </button>
+        </nav>
+    </header>
+    <main id="ct">
+        <div class="page" id="page1">
+            <h2 class="vdo_tit" id="vdo_tit1">Enjoy A Movie In Your Life</h2>
+            <h2 class="vdo_tit" id="vdo_tit2">Show Box</h2>
+            <div class="video_box">
+                <video src="./src/intro_vdo.mp4" autoplay muted loop id="vdo"></video>
+            </div>
+            <div class="film"></div>
+        </div>
+        <div class="page" id="page2">
+
+        </div>
+        <div class="page" id="page3">
+
+        </div>
+        <div class="page" id="page4">
+
+        </div>
+        <div class="page" id="page5">
+
+        </div>
+    </main>
+</body>
+</html>
