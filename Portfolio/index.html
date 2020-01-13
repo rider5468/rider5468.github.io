@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 모바일웹 스크롤에 따라 주소창 숨기기/드러내기 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+    // 자바스크립트로 모바일 웹 주소창 숨기기 (구형 모바일을 위한 것)
+    window.addEventListener('load', function() {
+        // body의 height를 살짝 늘리는 코드
+    document.body.style.height = (document.documentElement.clientHeight + 5) + 'px';
+        // scroll를 제어 하는 코드
+    setTimeout(function(){ window.scrollTo(0, 1); }, 100); 
+    });
+    </script>
+
+    <!-- 검색엔진 최적화 -->
+    <meta name="author" content="KIMHYUNWOO">
+    <meta name="keywords" content="검색어">
+    <meta name="description" content="설명">
+
+    <!-- 오픈그래프 -->
+    <meta property="fb:app_id" content="페이스북의 앱아이디">
+    <meta property="og:site_name" content="사이트나 앱이름">
+    <meta property="og:title" content="사이트 제목">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="도메인네임을 비롯한 사이트 주소">
+    <meta property="og:image" content="">
+    <meta property="twitter:card" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+
+    <!-- 파비콘 -->
+    <link rel="canonical" href="#">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="180x180" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="shortcut icon" type="image/x-icon" sizes="180x180" href="">
+
+    <!-- CSS링크 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>HyunWoo's Portfolio</title>
+    <!-- 폰트 cdn -->
+    <!-- 구글폰트 : https://fonts.google.com/?subset=korean&selection.family=Noto+Sans+KR -->
+    <!-- 눈누 : https://noonnu.cc/-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!-- font-family: 'Noto Sans KR', sans-serif; -->
+
+    <!-- XE icon cdn -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 아이콘셋 : https://xpressengine.github.io/XEIcon/library-2.3.3.html -->
+    <!-- 형식 : <span class="xi-bars"></span>-->
+
+    <style>
+
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+    
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div class="back"></div>
+    <div class="moon"></div>
+    <header id="hd">
+        <nav id="gnb">
+            <ul class="mainmenu">
+                <li><a href="#page1">About<span class="highlight"></span></a></li>
+                <li><a href="#page2">Working<span class="highlight"></span></a></li>
+                <li><a href="#page3">Portfolio<span class="highlight"></span></a></li>
+                <li><a href="#page4">Contact Me<span class="highlight"></span></a></li>
+            </ul>
+            </nav>
+    </header>
+    <main id="ct">
+        <div class="page" id="page0">
+            <h2 class="main_tit">Welcome HyunWoo's Portfolio</h2>
+            <div class="scroll_down"></div>
+            <p class="scroll_down_txt">SCROLL DOWN</p>
+        </div>
+        <div class="page" id="page1">
+            <h2 class="page_tit">ABOUT</h2>
+            <div class="left_box">
+                <h3 class="box_tit">INTRODUCE</h3>
+                <div class="my_pic">
+                    <div class="hover_me"></div>
+                    <div class="my_profile">
+                        <p class="profile_txt">
+                            NAME : 김현우 <br>
+                            AGE : 만 29세(1990.12.30) <br>
+                            ADDRESS : 대전 대덕구 비래동 <br>
+                            E-MAIL : rider5468@naver.com <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box">
+                <h3 class="box_tit">SKILL</h3>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <h2 class="page_tit">WORKING</h2>
+        </div>
+        <div class="page" id="page3">
+            <h2 class="page_tit">PORTFOLIO</h2>
+        </div>
+        <div class="page" id="page4">
+            <h2 class="page_tit">CONTACT ME</h2>
+        </div>
+    </main>
+    <footer id="ft">
+
+    </footer>
+    <button id="toTop"></button>
+</div>
+</body>
+</html>
