@@ -1,0 +1,12 @@
+/* NanumBarunGothic 기본 폰트 */
+@font-face{
+    font-family: "04b_30";
+    src: url('../font/04b_30.eot')format('eot');
+    src: url('../font/04b_30.woff') format('woff');
+    }
+    /* NanumBarunGothic 굵은 폰트 */
+    @font-face{
+    font-family: "8bit_wonder";
+    src: url('../font/8bit_wonder.eot')format('eot');
+    src: url('../font/8bit_wonder.woff')format('woff');
+    }
