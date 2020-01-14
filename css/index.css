@@ -1,90 +1,119 @@
 @charset "utf-8";
+/*
 
-/* RESET */
+    color  컨디먼츠 (Condiments)
+
+    #E2495B 케첩
+    #C4BA3B 레리시
+    #F4ED6E 머스터드
+    #FFFEE6 마요네즈
+
+*/
+
+
+/* reset */
 * { padding: 0; margin: 0;}
-html, body { width: 100%; height: 100%; -ms-overflow-style: hidden; font-size: 14px; font-family: '8bit_wonder', sans-serif;}
-html { overflow: hidden;}
-body { overflow: auto;}
+html, body { width: 100%; height: 100%; -ms-overflow-style: hidden; font-size: 14px; font-family: 'noonkot', sans-serif; color: #555;}
 ::-webkit-scrollbar { display: none;} ::-moz-scrollbar { display: none;} ::-o-scrollbar { display: none;} ::-ms-scrollbar { display: none; }
 ul { list-style: none;}
-a { text-decoration: none; font-size: 14px; }
+a { text-decoration: none; font-size: 1rem; color: #555;}
 input, button, img { border: 0; outline: 0; background-color: transparent;}
 button, label, input, a { user-select: none;}
 table {display: table;}
 tr {display: table-row;}
 th, td {display: table-cell;}
 input[type=checkbox], input[type=radio] { display: none; }
-/* RESET END */
 
-/* AREA */
-.page { position: relative; width: 100vw; height: 100vh; }
-.page:after { content:""; display: table; clear: both;}
-/* AREA END */
+/* reset end */
 
-/* WRAP ( BACKGROUND FIXED ) */
-#wrap { position: relative; clear: both;}
-.back { position: fixed; width: 100vw; height: 100vh; background-image: url(../src/background.png); background-position: center; background-size: cover; background-repeat: no-repeat; z-index: -1;}
-.moon { position: fixed; width: 5rem; height: 5rem; top: 20vh; right: 30%; background-image: url(../src/background_moon.png); background-position: center; background-repeat: no-repeat; background-size: contain; animation: moonAni 2s linear infinite; z-index: -1;}
+/* area */
 
-@keyframes moonAni {
-    0%{ transform: translate(0%, 0%); }
-    50%{ transform: translate(0%, -10%); }
-    100%{ transform: translate(0%, 0%); }
-}
-/* WRAP END*/
-
-/* HEADER */
-#gnb { position: fixed; top: 5vh; right: 5vw; z-index: 999;}
-#gnb .mainmenu{ display: flex; width: 50vw; height: 100%; justify-content: space-around; align-items: center;}
-#gnb a { position: relative; display: block; font-family: '04b_30'; color: #fff; font-size: 2rem; font-weight: bold; transition: 0.6s;}
-#gnb .highlight { transition: 0.6s; width: 0%; left: -10%; top: 50%; transform: translate(0%, -50%);}
-#gnb a:hover .highlight { display: block; position: absolute; width: 120%; height: 1rem;    background-color: goldenrod; z-index: -1;}
-
-/* HEADER END */
-
-/* MAIN */
-
-/* PAGE0 */
-.main_tit { position: absolute; color: white; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; text-shadow: 0 0 20px yellow;}
-.scroll_down { position: absolute; width: 20px; height: 50px; bottom: 0; left: 50%; transform: translate(-50%, -3rem); background-image: url(../src/icon/scroll_down.png); background-size: contain; background-repeat: no-repeat; background-position: center; animation: downAni 1s linear infinite;}
-@keyframes downAni{
-    0%{ opacity: 1;}
-    50%{ opacity: 0;}
-    100%{  opacity: 1;}
-}
-.scroll_down_txt { position: absolute; bottom: 1rem; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; font-size: 0.8rem}
-/* PAGE0 END*/
-
-/* COMMON PAGE */
-.page_tit { height: 3rem; padding-top: calc(5vh + 5rem); text-align: center; font-size: 3rem; line-height: 3rem; color: white;}
-/* COMMON PAGE END */
-
-
-/* PAGE1 */
+#ct { width: 500%; height: 100vh;}
+.page { float: left; position: relative; width: 100vw; height: 100vh; background-position: center; background-size: cover; background-repeat: no-repeat; overflow: hidden;}
+.page::after { content: ""; display: table; clear: both;}
+.con_fr { position: absolute; width: 70vw; height: 70vh; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.con_tit { height: 5rem; line-height: 5rem; font-size: 3rem; text-align: center;}
 #page1 { }
-.left_box, .right_box { position: relative; float: left; width: 50vw; height: calc(100vh - 5rem);}
-.box_tit { padding-top: 3rem; text-align: center; color: white; font-size: 1.4rem;}
-.my_pic { position: absolute; width: 40rem; height: 40rem; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background-image: url(../src/my_cha.png); background-size: contain; background-repeat: no-repeat; background-position: cover;  overflow: hidden; transition: 1s;}
-.hover_me { float: right; width: 10rem; height: 5rem; margin: 4rem 7rem; background-image: url(../src/hover_txt.gif); background-size: cover; background-repeat: no-repeat; background-position: center; transition: 1s;}
-.my_profile { position: relative; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); border-radius: 100%; transform-origin: bottom center; transform: rotate(180deg); transition: 1s;}
-.profile_txt { position: absolute; width: 80%; height: 42%; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Noto-Sans', sans-serif; color: white; padding-left: 3rem; font-size: 1.8rem; line-height: 4rem; font-weight: bold; box-sizing: border-box;}
-
-.my_pic:hover { box-shadow: 0 0 10px yellow;}
-.my_pic:hover .hover_me { opacity: 0;}
-.my_pic:hover .my_profile{ transform: rotate(0deg);}
-
-/* MAIN END */
+#page2.page { background-image: url(../src/intro_back.png); background-position: top right; background-size: inherit;}
+#page3 { background-image: url(../src/ability_back.png);}
+#page4 { background-color: lightgreen;}
+#page5 { background-color: lightsalmon;}
 
 
+/* area end */
 
+/* header */
 
+#gnb { position: fixed; top: 0; right: 0; width: 60rem; height: 10rem; z-index: 100;}
+#gnb .menu { display: flex; width: 100%; height: 100%; justify-content: space-around; align-items: center;}
+#gnb button { display: block; position: relative; width: 10rem; height: 4rem; font-family: noonkot; font-size: 2rem; color: #555; font-weight: bold; margin: 0 auto; overflow: hidden; cursor: pointer;}
+#gnb button span::before { content: ""; position: absolute; width: 100%; height: 2px; left: 0; top: 0; background: #E2495B; transition: 0.1s; transform: translateX(-100%);}
+#gnb button span::after { content: ""; position: absolute; width: 100%; height: 2px; right: 0; bottom: 0; background: #E2495B; transition: 0.1s 0.2s; transform: translateX(100%);}
+#gnb button::before { content: ""; position: absolute; width: 2px; height: 100%; left: 0; top: 0; background: #E2495B; transform: translateY(100%); transition: 0.1s 0.3s;}
+#gnb button::after { content: ""; position: absolute; width: 2px; height: 100%; right: 0; bottom: 0; background: #E2495B; transform: translateY(-100%); transition: 0.1s 0.1s;}
+#gnb button:hover { color: #E2495B;}
+#gnb button:hover::before,
+#gnb button:hover::after { transform: translateX(0);}
+#gnb button:hover span::before,
+#gnb button:hover span::after { transform: translateX(0);}
 
+/* header end */
 
+/* page1 */
 
+.back_circle { position: absolute; width: 50rem; height: 50rem; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background-color: #F4ED6E; box-shadow: 1rem 1rem #C4BA3B; animation: circleAni 6s linear infinite;}
+@keyframes circleAni{
+    0% { border-radius: 100% 100% 100% 100%;}
+    20% { border-radius: 90% 80% 100% 80%;}
+    40% { border-radius: 100% 80% 90% 100%;}
+    60% { border-radius: 80% 100% 80% 90%;}
+    80% { border-radius: 90% 80% 100% 80%;}
+    100% { border-radius: 100% 100% 100% 100%;}
+}
+.back_circle::before { content: ""; position: absolute; width: 50rem; height: 50rem; top: 46%; left: 46%; transform: translate(-50%, -50%); border-radius: 100%; background-color: #FFFEE6; box-shadow: -1rem -1rem #E2495B; animation: circleAni 5s linear infinite; z-index: -1;}
+.circle_fr { position: relative; width: 100%; height: 100%;}
+.main_txt_box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.main_tit { font-size: 4rem; color: #333; text-align: right;}
+.main_subtit { font-size: 2rem; color: #333;  text-align: right;}
+.main_subtit:last-child { font-size: 1.4em; color: #555;}
 
+/* page1 end */
 
+/* page2 */
 
+.box_fr { position: relative; width: 100%; height: calc(100% - 5rem);}
+.page2_box1,
+.page2_box2 { position: absolute; width: 100%; height: 100%; border-radius: 2rem;}
+.page2_box2 { display: none;}
+.box_tit { padding-left: 3rem; height: 5rem; line-height: 5rem; font-size: 2rem;}
+.box_com { font-size: 1.5rem; font-weight: bold; text-align: center; line-height: 6rem;}
+.picture { width: 195px; height: 195px; margin: 0 auto; border: 5px dotted #E2495B; box-shadow: 0 0 10px #F4ED6E; border-radius: 100%; background-color: #eee;}
+.page2_btn { position: absolute; display: block; width: 6rem; height: 4rem; bottom: 1rem; right: 20%; border-radius: 1rem; box-shadow: 0 0 5px; cursor: pointer; z-index: 1; transition: 1s; }
+.page2_btn.on { transform: rotateY(180deg); }
+.page2_btn .burger { position: relative; display: block; width: 100%; height: 100%;}
+.burger span { position: absolute; display: block; width: 2rem; height: 5px; background: #555;}
+.burger span:nth-child(1) { width: 1.4rem; top: 40%; left: 60%; transform: translate(-50%, -50%) rotate(45deg);}
+.burger span:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.burger span:nth-child(3) { width: 1.4rem; top: 60%; left: 60%; transform: translate(-50%, -50%) rotate(-45deg);}
 
-/* To Top button */
+.page2_btn:hover {box-shadow: 0 0 5px #E2495B;}
+.page2_btn:hover .burger span { background-color: #E2495B;}
 
-#toTop { display: block; position: fixed; width: 50px; height: 50px; bottom: 5vh; right: 5vw; background-image: url(../src/icon/to_top.png); background-size: 30px; background-repeat: no-repeat; background-position: center; border-radius: 100%; box-shadow: 0px 0px 5px yellow; cursor: pointer; z-index: 10;}
+/* page2 end */
+
+/* page3 */
+
+#page3 .con_tit { color: white;}
+#page3.on { animation: dropAni 2s ease-in-out;}
+@keyframes dropAni{
+    0% { background-position: center -100vh;}
+    50% { background-position: center 0vh;}
+    55% { background-position: center -6vh;}
+    60% { background-position: center 0vh;}
+    65% { background-position: center -5vh;}
+    70% { background-position: center 0vh;}
+    75% { background-position: center -2vh;}
+    80% { background-position: center 0vh;}
+}
+
+#page3 .box_fr { background-color: pink;}

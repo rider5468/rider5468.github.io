@@ -68,59 +68,83 @@
     </script>
 </head>
 <body>
-<div id="wrap">
-    <div class="back"></div>
-    <div class="moon"></div>
+<div class="wrap">
     <header id="hd">
         <nav id="gnb">
-            <ul class="mainmenu">
-                <li><a href="#page1">About<span class="highlight"></span></a></li>
-                <li><a href="#page2">Working<span class="highlight"></span></a></li>
-                <li><a href="#page3">Portfolio<span class="highlight"></span></a></li>
-                <li><a href="#page4">Contact Me<span class="highlight"></span></a></li>
-            </ul>
-            </nav>
+            <div class="menu">
+                <button><span>Home</span></button>
+                <button><span>Intro</span></button>
+                <button><span>Ability</span></button>
+                <button><span>Portfolio</span></button>
+                <button><span>Contact</span></button>
+            </div>
+        </nav>
     </header>
     <main id="ct">
-        <div class="page" id="page0">
-            <h2 class="main_tit">Welcome HyunWoo's Portfolio</h2>
-            <div class="scroll_down"></div>
-            <p class="scroll_down_txt">SCROLL DOWN</p>
-        </div>
-        <div class="page" id="page1">
-            <h2 class="page_tit">ABOUT</h2>
-            <div class="left_box">
-                <h3 class="box_tit">INTRODUCE</h3>
-                <div class="my_pic">
-                    <div class="hover_me"></div>
-                    <div class="my_profile">
-                        <p class="profile_txt">
-                            NAME : 김현우 <br>
-                            AGE : 만 29세(1990.12.30) <br>
-                            ADDRESS : 대전 대덕구 비래동 <br>
-                            E-MAIL : rider5468@naver.com <br>
-                        </p>
+        <section class="page" id="page1">
+            <div class="back_circle"></div>
+            <div class="main_txt_box">
+                <h1 class="main_tit">Welcome</h1>
+                <h3 class="main_subtit">김현우의 개인포트폴리오 페이지입니다.</h3>
+                <h3 class="main_subtit">Publisher/Front-End Developer</h3>
+            </div>
+        </section>
+        <section class="page" id="page2">
+            <div class="page2_box" id="left_box">
+                <div class="con_fr">
+                    <h1 class="con_tit">Intro</h1>
+                    <div class="box_fr">
+                        <button class="page2_btn">
+                            <span class="burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                            <div class="page2_box1">
+                                <h2 class="box_tit">Profile</h2>
+                                <div class="picture"></div>
+                                <p class="box_com">
+                                    김현우<br>
+                                    1990.12.30<br>
+                                    대전광역시 대덕구 비래동<br>
+                                    rider5468@naver.com
+                                </p>
+                            </div>
+                            <div class="page2_box2">
+                                <h2 class="box_tit">License</h2>
+                                <p class="box_com">
+                                    GTQ - 그래픽기술자격 1급 <br>
+                                    전산세무 2급 <br>
+                                    전산회계 1급 <br>
+                                    FAT 1급 <br>
+                                    ERP 인사정보관리사 1급 <br>
+                                    ITQ Master (한글, 엑셀, 파워포인트) <br>
+                                </p>
+                            </div>
+                        </div>
                     </div>
+            </div>
+        </section>
+        <section class="page" id="page3">
+            <div class="con_fr">
+                <h1 class="con_tit">Ability</h1>
+                <div class="box_fr"></div>
+                        <div class="ability ab_html">HTML5</div>
+                        <div class="ability ab_css">CSS3</div>
+                        <div class="ability ab_script">javascript</div>
+                        <div class="ability ab_query">jQuery</div>
+                        <div class="ability ab_oa">OA</div>
                 </div>
             </div>
-            <div class="right_box">
-                <h3 class="box_tit">SKILL</h3>
-            </div>
-        </div>
-        <div class="page" id="page2">
-            <h2 class="page_tit">WORKING</h2>
-        </div>
-        <div class="page" id="page3">
-            <h2 class="page_tit">PORTFOLIO</h2>
-        </div>
-        <div class="page" id="page4">
-            <h2 class="page_tit">CONTACT ME</h2>
-        </div>
+        </section>
+        <section class="page" id="page4"></section>
+        <section class="page" id="page5"></section>
     </main>
     <footer id="ft">
 
     </footer>
-    <button id="toTop"></button>
 </div>
+
 </body>
 </html>
