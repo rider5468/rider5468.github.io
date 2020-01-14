@@ -37,26 +37,19 @@
 
     <!-- 파비콘 -->
     <link rel="canonical" href="#">
-    <link rel="shortcut icon" type="image/x-icon" href="">
-    <link rel="icon" type="image/png" sizes="180x180" href="">
-    <link rel="apple-touch-icon" sizes="180x180" href="">
-    <link rel="shortcut icon" type="image/x-icon" sizes="180x180" href="">
+    <link rel="shortcut ab_icon" type="image/x-ab_icon" href="">
+    <link rel="ab_icon" type="image/png" sizes="180x180" href="">
+    <link rel="apple-touch-ab_icon" sizes="180x180" href="">
+    <link rel="shortcut ab_icon" type="image/x-ab_icon" sizes="180x180" href="">
 
     <!-- CSS링크 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/font.css">
     <title>HyunWoo's Portfolio</title>
-    <!-- 폰트 cdn -->
-    <!-- 구글폰트 : https://fonts.google.com/?subset=korean&selection.family=Noto+Sans+KR -->
-    <!-- 눈누 : https://noonnu.cc/-->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!-- font-family: 'Noto Sans KR', sans-serif; -->
-
-    <!-- XE icon cdn -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <!-- 아이콘셋 : https://xpressengine.github.io/XEIcon/library-2.3.3.html -->
-    <!-- 형식 : <span class="xi-bars"></span>-->
+    <!-- xeicon -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!-- font-family: 'Noto Sans KR', sans-serif; -->
 
     <style>
 
@@ -90,56 +83,185 @@
             </div>
         </section>
         <section class="page" id="page2">
-            <div class="page2_box" id="left_box">
-                <div class="con_fr">
-                    <h1 class="con_tit">Intro</h1>
-                    <div class="box_fr">
-                        <button class="page2_btn">
-                            <span class="burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-                            <div class="page2_box1">
-                                <h2 class="box_tit">Profile</h2>
-                                <div class="picture"></div>
-                                <p class="box_com">
-                                    김현우<br>
-                                    1990.12.30<br>
-                                    대전광역시 대덕구 비래동<br>
-                                    rider5468@naver.com
-                                </p>
-                            </div>
-                            <div class="page2_box2">
-                                <h2 class="box_tit">License</h2>
-                                <p class="box_com">
-                                    GTQ - 그래픽기술자격 1급 <br>
-                                    전산세무 2급 <br>
-                                    전산회계 1급 <br>
-                                    FAT 1급 <br>
-                                    ERP 인사정보관리사 1급 <br>
-                                    ITQ Master (한글, 엑셀, 파워포인트) <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <h1 class="page_tit">Intro</h1>
+            <div class="page2_box1">
+                <figure class="vs_profile">
+                    <div class="pic on" id="pic1">pic1</div>
+                    <div class="pic" id="pic2">pic2</div>
+                    <div class="pic" id="pic3">pic3</div>
+                    <div class="pic" id="pic4">pic4</div>
+                </figure>
+                <div class="profile_box">
+                    <div class="box_tit_bg"></div>
+                    <h2 class="box_tit">Profile</h2>
+                    <p class="box_com">
+                        <span>김현우</span><br>
+                        <span>1990.12.30</span><br>
+                        <span>대전광역시 대덕구 비래동</span><br>
+                        <span>rider5468@naver.com</span>
+                    </p>
+                </div>
+            </div>
+            <div class="page2_box2">
+                <div class="box_tit_bg"></div>
+                <h2 class="box_tit">License</h2>
+                <p class="box_com">
+                    <span>GTQ - 그래픽기술자격 1급</span><br>
+                    <span>전산세무 2급</span><br>
+                    <span>전산회계 1급</span><br>
+                    <span>FAT 1급</span><br>
+                    <span>ERP 인사정보관리사 1급</span><br>
+                    <span>ITQ Master (한글, 엑셀, 파워포인트)</span><br>
+                </p>
             </div>
         </section>
         <section class="page" id="page3">
-            <div class="con_fr">
-                <h1 class="con_tit">Ability</h1>
-                <div class="box_fr"></div>
-                        <div class="ability ab_html">HTML5</div>
-                        <div class="ability ab_css">CSS3</div>
-                        <div class="ability ab_script">javascript</div>
-                        <div class="ability ab_query">jQuery</div>
-                        <div class="ability ab_oa">OA</div>
+                <h1 class="page_tit">Ability</h1>
+                <div class="page3_box">
+                    <div class="ability" id="ab1"></div>
+                    <div class="ability" id="ab2"></div>
+                    <div class="ability" id="ab3"></div>
+                    <div class="ability" id="ab4"></div>
+                    <div class="ability" id="ab5"></div>
+                    <div class="ab_box">
+                        <div class="item ab_html">
+                            <div class="ab_icon"></div>
+                            <div class="ab_per">
+                                <div class="circle_box">
+                                    <svg viewbox="0 0 36 36" class="circle_chart chart1">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <path class="circle"
+                                        stroke-dasharray="90, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <text x="18" y="20.35" class="percentage">90%</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ab_css">
+                            <div class="ab_icon"></div>
+                            <div class="ab_per">
+                                <div class="circle_box">
+                                    <svg viewbox="0 0 36 36" class="circle_chart chart2">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                </div>
+
+                            </div>
+                      </div>
+                        <div class="item ab_js">
+                            <div class="ab_icon"></div>
+                            <div class="ab_per">
+                                <div class="circle_box">
+                                    <svg viewbox="0 0 36 36" class="circle_chart chart3">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <path class="circle"
+                                        stroke-dasharray="50, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <text x="18" y="20.35" class="percentage">50%</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ab_jq">
+                            <div class="ab_icon"></div>
+                            <div class="ab_per">
+                                <div class="circle_box">
+                                    <svg viewbox="0 0 36 36" class="circle_chart chart4">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <path class="circle"
+                                        stroke-dasharray="60, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <text x="18" y="20.35" class="percentage">60%</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ab_oa">
+                            <div class="ab_icon ab_icon_"></div>
+                            <div class="ab_per">
+                                <div class="circle_box">
+                                    <svg viewbox="0 0 36 36" class="circle_chart chart5">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <path class="circle"
+                                        stroke-dasharray="70, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                      <text x="18" y="20.35" class="percentage">70%</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+        </section>
+        <section class="page" id="page4">
+            <h1 class="page_tit">Portfolio</h1>
+            <div class="page4_box">
+                <figure class="sl">
+                    <ul class="sl_box">
+                        <li>
+                            <img src="" alt="종로구문화관광" class="sl_img item1 on">
+                            <h2 class="sl_tit_box on">Title</h2>
+                            <p class="sl_com_box on">Com</p>
+                        </li>
+                        <li>
+                            <img src="" alt="환인제약" class="sl_img item2">
+                            <h2 class="sl_tit_box">Title</h2>
+                            <p class="sl_com_box">Com</p>
+                        </li>
+                        <li>
+                            <img src="" alt="부산광역시청" class="sl_img item3">
+                            <h2 class="sl_tit_box">Title</h2>
+                            <p class="sl_com_box">Com</p>
+                        </li>
+                        <li>
+                            <img src="" alt="" class="sl_img item4">
+                            <h2 class="sl_tit_box">Title</h2>
+                            <p class="sl_com_box">Com</p>
+                        </li>
+                        <li>
+                            <img src="" alt="" class="sl_img item5">
+                            <h2 class="sl_tit_box">Title</h2>
+                            <p class="sl_com_box">Com</p>
+                        </li>
+                    </ul>
+                    <button class="sl_up_btn"><span class="xi-angle-up-min"></span></button>
+                    <button class="sl_down_btn"><span class="xi-angle-down-min"></span></button>
+                </figure>
             </div>
         </section>
-        <section class="page" id="page4"></section>
-        <section class="page" id="page5"></section>
+        <section class="page" id="page5">
+            <h1 class="page_tit">Contact</h1>
+        </section>
     </main>
     <footer id="ft">
 
